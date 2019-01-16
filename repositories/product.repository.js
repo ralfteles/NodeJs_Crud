@@ -20,8 +20,6 @@ module.exports = new class ProductRepository {
             name: product.name,
             price: product.price,
         }
-
-
         return Product.findByIdAndUpdate((id, p, { new: true }));
     }
 
