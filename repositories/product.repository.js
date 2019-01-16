@@ -23,7 +23,7 @@ module.exports = new class ProductRepository {
         return Product.findByIdAndUpdate((id, p, { new: true }));
     }
 
-    delete(id) {
+    remove(id) {
         return Product.findByIdAndRemove(id);
     }
 }

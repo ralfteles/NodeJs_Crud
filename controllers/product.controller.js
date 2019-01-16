@@ -44,7 +44,7 @@ exports.update = function (req, res, next) {
 }
 
 exports.delete = function (req, res, next) {
-    ProductRepository.delete(req.params.id)
+    ProductRepository.remove(req.params.id)
         .then(() => {
             res.status(200).send("Removido com sucesso!")
         }).catch(err => res.status(500).send(err))
