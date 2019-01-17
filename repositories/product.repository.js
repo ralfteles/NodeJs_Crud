@@ -14,13 +14,8 @@ module.exports = new class ProductRepository {
         return Product.findById(id);
     }
 
-    update(id, p) {
-
-        const updatedproduct = {
-            name: product.name,
-            price: product.price,
-        }
-        return Product.findByIdAndUpdate((id, p, { new: true }));
+    update(id, product) {
+        return Product.findByIdAndUpdate(id, product, { new: true });
     }
 
     remove(id) {
